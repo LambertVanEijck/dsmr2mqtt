@@ -133,8 +133,8 @@ class ParseTelegrams(threading.Thread):
       # about timezone & daylight saving
       # influxdb timestamp should be UTC epoch
       # https://stackoverflow.com/questions/8777753/converting-datetime-date-to-utc-timestamp-in-python
-      # if index == "0-0:1.0.0":
-      #  t = datetime.strptime(data, '%y%m%d%H%M%S')
+      if index == "0-0:1.0.0":
+        t = datetime.strptime(data, '%y%m%d%H%M%S')
 
       # If topic does not exist yet, create & initialize dictionary for this topic;
       # Add tag:data pairs; which will be converted to mqtt json later on.
