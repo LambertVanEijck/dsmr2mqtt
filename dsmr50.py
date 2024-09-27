@@ -53,7 +53,7 @@ definition = {
 # set serial frequecy equal to el_consumed, then use it as as tag for influxdb; truncated to last 8 digits
 # If full serial is required, remove \d{26}
 "0-0:96.1.1":   ["Equipment identifier",          "el", "serial",              "^.*\(\d{26}(.*)\)","str",   "1", "1",    "60", "0", "mdi:counter"],
-"0-0:1.0.0":    ["Timestamp [s]",                 "el", "timestamp",           "^.*\((.*)W\)",     "int",   "1", "1",    "0",   "0", "mdi:counter"],
+"0-0:1.0.0":    ["Timestamp [s]",                 "el", "timestamp",           "^.*\((.*)S\)",     "int",   "1", "1",    "0",   "0", "mdi:counter"],
 "0-0:96.7.21":  ["Number of power failures",      "el", "power_failures",      "^.*\((.*)\)",      "int",   "0", "1",    "12",  "0", "mdi:counter"],
 "0-0:96.7.9":   ["Number of long power failures", "el", "long_power_failures", "^.*\((.*)\)",      "int",   "0", "1",    "12",  "0", "mdi:counter"],
 "0-0:96.14.0":  ["Tariff indicator electricity",  "el", "tariff_indicator",    "^.*\((.*)\)",      "int",   "0", "1",    "0",   "0", "mdi:counter"],
